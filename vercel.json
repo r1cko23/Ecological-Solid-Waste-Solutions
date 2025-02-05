@@ -4,7 +4,8 @@
   "redirects": [
     {
       "source": "/index",
-      "destination": "/"
+      "destination": "/",
+      "permanent": true
     },
     {
       "source": "http://eco-solutions.ph/:path*",
