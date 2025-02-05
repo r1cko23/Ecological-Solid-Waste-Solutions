@@ -5,6 +5,11 @@
     {
       "source": "/index",
       "destination": "/"
+    },
+    {
+      "source": "http://eco-solutions.ph/:path*",
+      "destination": "https://eco-solutions.ph/:path*",
+      "permanent": true
     }
   ]
-} 
+}
