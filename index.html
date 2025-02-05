@@ -125,11 +125,14 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form id="contactForm" action="mailto:sales@eco-solutions.ph" method="POST" enctype="text/plain">
+                    <form id="contactForm" action="https://formspree.io/f/mgvozeba" method="POST" enctype="text/plain">
                         <input type="email" name="email" placeholder="Enter your email address*" required>
                         <textarea name="message" placeholder="Message" required></textarea>
                         <button type="submit" class="cta-button">Submit your inquiry now</button>
                     </form>
+                    <div id="confirmationMessage" style="display: none; color: green; margin-top: 10px;">
+                        Your inquiry has been sent! We will get in touch with you soon.
+                    </div>
                 </div>
             </div>
         </div>
@@ -157,7 +160,9 @@
 
             emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
                 .then(function() {
-                    alert('Email sent successfully!');
+                    // Show confirmation message
+                    document.getElementById('confirmationMessage').style.display = 'block';
+                    document.getElementById('contactForm').reset(); // Reset the form
                 }, function(error) {
                     alert('Failed to send email. Please try again later.');
                 });
