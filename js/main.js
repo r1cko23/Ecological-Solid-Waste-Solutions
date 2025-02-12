@@ -261,3 +261,22 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(element);
     });
 });
+
+function showRegion(regionId) {
+    const region = document.getElementById(regionId);
+    if (region) {
+        region.style.display = 'block';
+        // Position the info box near the cursor
+        document.addEventListener('mousemove', function(e) {
+            region.style.left = (e.pageX + 20) + 'px';
+            region.style.top = (e.pageY + 20) + 'px';
+        });
+    }
+}
+
+function hideRegion(regionId) {
+    const region = document.getElementById(regionId);
+    if (region) {
+        region.style.display = 'none';
+    }
+}

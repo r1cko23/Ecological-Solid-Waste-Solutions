@@ -106,7 +106,46 @@
         <div class="container">
             <h2>Our Clients and Partners</h2>
             <div class="partners-grid">
-                <img src="assets/images/Govt Clients.png" alt="Government Clients" class="partner-image">
+                <div class="map-container">
+                    <img src="assets/images/Govt Clients.png" alt="Government Clients" class="partner-image" usemap="#clientmap">
+                    <map name="clientmap">
+                        <!-- North Luzon -->
+                        <area shape="rect" coords="0,0,200,200" 
+                              alt="North Luzon" 
+                              data-region="north-luzon"
+                              onmouseover="showRegion('north-luzon')" 
+                              onmouseout="hideRegion('north-luzon')">
+                        <!-- Central Luzon -->
+                        <area shape="rect" coords="200,0,400,200" 
+                              alt="Central Luzon" 
+                              data-region="central-luzon"
+                              onmouseover="showRegion('central-luzon')" 
+                              onmouseout="hideRegion('central-luzon')">
+                        <!-- Add more areas as needed -->
+                    </map>
+                    
+                    <!-- Hover Info Boxes -->
+                    <div id="north-luzon" class="region-info">
+                        <h3>North Luzon</h3>
+                        <ul>
+                            <li>Laoag City, Ilocos Norte</li>
+                            <li>San Nicolas, Ilocos Norte</li>
+                            <li>Batac City, Ilocos Norte</li>
+                            <li>Carasi, Ilocos Norte</li>
+                            <li>Butiga, Ilocos Norte</li>
+                        </ul>
+                    </div>
+                    
+                    <div id="central-luzon" class="region-info">
+                        <h3>Central Luzon</h3>
+                        <ul>
+                            <li>Abucay, Bataan</li>
+                            <li>Hermosa, Bataan</li>
+                            <li>Orani, Bataan</li>
+                            <li>Samal, Bataan</li>
+                        </ul>
+                    </div>
+                </div>
                 <img src="assets/images/Westcom A_O DEC2024.png" alt="Westcom Partners" class="partner-image">
             </div>
         </div>
