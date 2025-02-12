@@ -279,11 +279,12 @@ h2 {
 
 .map-container {
     position: relative;
-    display: inline-block;
     max-width: 100%;
+    margin: 0 auto;
+    display: inline-block;
 }
 
-.partner-image {
+.service-image {
     max-width: 100%;
     height: auto;
     display: block;
@@ -302,21 +303,21 @@ h2 {
 }
 
 .region-info h3 {
-    margin: 0 0 10px 0;
-    color: #333;
+    color: var(--primary-color);
+    margin-bottom: 10px;
     font-size: 1.1rem;
 }
 
 .region-info ul {
+    list-style: none;
     margin: 0;
     padding: 0;
-    list-style: none;
 }
 
 .region-info li {
-    padding: 3px 0;
-    font-size: 14px;
-    color: #666;
+    padding: 5px 0;
+    font-size: 0.9rem;
+    color: var(--text-color);
 }
 
 /* Contact Section */

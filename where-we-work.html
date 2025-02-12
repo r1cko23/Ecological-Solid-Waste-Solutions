@@ -42,34 +42,51 @@
 
         <section class="locations-display">
             <div class="container">
-                <div class="locations-content">
-                    <div class="image-container">
-                        <img src="assets/images/Govt Clients.png" alt="Philippines Service Areas" class="service-image">
+                <div class="map-container">
+                    <img src="assets/images/Govt Clients.png" alt="Philippines Service Areas" class="service-image" usemap="#serviceMap">
+                    
+                    <map name="serviceMap">
+                        <!-- North Luzon Region -->
+                        <area shape="poly" 
+                              coords="100,50,200,50,200,150,100,150" 
+                              alt="North Luzon"
+                              onmouseover="showRegion('north-luzon')" 
+                              onmouseout="hideRegion('north-luzon')">
+                        
+                        <!-- Central Luzon Region -->
+                        <area shape="poly" 
+                              coords="150,150,250,150,250,250,150,250" 
+                              alt="Central Luzon"
+                              onmouseover="showRegion('central-luzon')" 
+                              onmouseout="hideRegion('central-luzon')">
+                    </map>
+
+                    <!-- Hover Info Boxes -->
+                    <div id="north-luzon" class="region-info">
+                        <h3>North Luzon</h3>
+                        <ul>
+                            <li>Apari, Cagayan</li>
+                            <li>Lal-lo, Cagayan</li>
+                            <li>Alcapan, Cagayan</li>
+                            <li>Banave, Ifugao</li>
+                            <li>Boliney, Abra</li>
+                            <li>Tuguegarao City</li>
+                            <li>Cabagan, Isabela</li>
+                            <li>Quirino, Isabela</li>
+                        </ul>
                     </div>
-                    <div class="locations-list">
-                        <h3>Our Service Areas</h3>
-                        <div class="locations-columns">
-                            <ul>
-                                <li>Apari, Cagayan</li>
-                                <li>Lal-lo, Cagayan</li>
-                                <li>Alcapan, Cagayan</li>
-                                <li>Banave, Ifugao</li>
-                                <li>Boliney, Abra</li>
-                                <li>Tuguegarao City</li>
-                                <li>Cabagan, Isabela</li>
-                                <li>Quirino, Isabela</li>
-                            </ul>
-                            <ul>
-                                <li>Bambang, N.V.</li>
-                                <li>Solano, N.V.</li>
-                                <li>Rizal, Nueva Ecija</li>
-                                <li>Capital, Pangasinan</li>
-                                <li>Bayambang, Pangasinan</li>
-                                <li>Malasiqui, Pangasinan</li>
-                                <li>Bani, Pangasinan</li>
-                                <li>MMDA</li>
-                            </ul>
-                        </div>
+
+                    <div id="central-luzon" class="region-info">
+                        <h3>Central Luzon</h3>
+                        <ul>
+                            <li>Bambang, N.V.</li>
+                            <li>Solano, N.V.</li>
+                            <li>Rizal, Nueva Ecija</li>
+                            <li>Capital, Pangasinan</li>
+                            <li>Bayambang, Pangasinan</li>
+                            <li>Malasiqui, Pangasinan</li>
+                            <li>Bani, Pangasinan</li>
+                        </ul>
                     </div>
                 </div>
             </div>
